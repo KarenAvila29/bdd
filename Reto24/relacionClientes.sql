@@ -37,15 +37,3 @@ values ('1725168139','Karen','Avila','39');
 
 insert into compras (id_compra,cedula,fecha_compra,monto)
 values (01,'1725168139','01/10/2015',30);
-
---RETO 24----
-select cl.nombre,cl.apellido from
-clientes cl ,compras co
-where
- cl.cedula like '%7%'
-
-select cl.cedula,cl.nombre,cl.apellido,cl.edad from
-clientes cl ,compras co
-where
- cl.nombre='Monica'
-

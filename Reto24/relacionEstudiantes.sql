@@ -51,18 +51,3 @@ values (0023,'Andres');
 insert into profesor (codigo,nombre)
 values (0024,'Francia');
 
-
---RETO24--
-select pr.codigo,es.nombre,es.apellido from
-estudiantes es ,profesor pr
-where
-	es.codigo_profesor = pr.codigo
- and es.nombre like '%n%' 
-or es.apellido like '%n%'
-
-select es.cedula,es.nombre,es.apellido,es.email,pr.codigo from
-estudiantes es ,profesor pr
-where
-	es.codigo_profesor = pr.codigo
- and pr.nombre = 'Francisco' 
-

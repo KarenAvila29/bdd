@@ -7,10 +7,6 @@ create table usuario(
 	constraint cedula_usuario_pk primary key(cedula)
 )
 
-
-
-
-
 select * from cuentas
 select * from usuario
 
@@ -66,17 +62,4 @@ values (25577,17512,'27/09/2023',900);
 insert into cuentas (numero_cuenta,cedula_propietario,fecha_creacion,saldo)
 values (25578,17503,'15/08/2013',1000);
 
-------RETO23------
-select cu.numero_cuenta, us.nombre from 
-cuentas cu, usuario us
-where
-     us.cedula = cu.cedula_propietario
-and cu.saldo between '100' and '1000'
-
-
-select cu.numero_cuenta,cu.fecha_creacion,cu.saldo,us.cedula from 
-cuentas cu, usuario us
-where
-     us.cedula = cu.cedula_propietario
-and cu.fecha_creacion between '21/09/2022' and '21/09/2023';
 

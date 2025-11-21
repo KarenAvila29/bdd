@@ -37,8 +37,7 @@ insert into prestamo(cedula,monto,fecha_prestamo,hora_prestamo,garante)
 values('1725168130',500.20 ,'18/08/2023', '8:00','Pedro');
 insert into prestamo(cedula,monto,fecha_prestamo,hora_prestamo,garante)
 values('1725168131',3050.5 ,'18/08/2023', '9:00','Maria');
-insert into prestamo(cedula,monto,fecha_prestamo,hora_prestamo,garante)
-values('1725168132',3050.5 ,'18/08/2023', '9:00','Pedro');
+
 
 insert into persona(cedula,nombre,apellido,estatura,fecha_nacimiento,hora_nacimiento,cantidad_ahorrada,numero_hijos)
 values('1725168130','Karen','Avila', 1.49,'29/08/1993','10:45',350.00,0);
@@ -63,17 +62,3 @@ values('1725168139','Karen8','Avila', 1.57,'29/08/1993','10:45',350.00,0);
 insert into persona(cedula,nombre,apellido,estatura,fecha_nacimiento,hora_nacimiento,cantidad_ahorrada,numero_hijos)
 values('1725168140','Karen9','Avila', 1.48,'29/08/1993','10:45',350.00,0);
 
-
-
---RETO24----
-select pe.cantidad_ahorrada,pm.monto,pm.garante from
-persona pe ,prestamo pm
-where
-pe.cedula=pm.cedula
-and pm.monto between '100' and '1000'
-
-select * from
-persona pe ,prestamo pm
-where
-pm.cedula =pe.cedula
-and pe.nombre = 'Sean';

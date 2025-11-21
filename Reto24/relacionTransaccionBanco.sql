@@ -27,14 +27,6 @@ values(53147, '22001', 500.65, 'C', '15/06/2022', '17:55');
 
 insert into transacciones(codigo, numero_cuenta, monto, tipo, fecha, hora)
 values(32548, '21004', 1600, 'C', '17/05/2021', '16:37');
-insert into transacciones(codigo, numero_cuenta, monto, tipo, fecha, hora)
-values(32560, '21005', 1600, 'C', '17/05/2021', '16:37');
-insert into transacciones(codigo, numero_cuenta, monto, tipo, fecha, hora)
-values(32599, '21002', 1600, 'C', '17/05/2021', '16:37');
-insert into transacciones(codigo, numero_cuenta, monto, tipo, fecha, hora)
-values(32569, '22005', 1600, 'C', '17/05/2021', '16:37');
-insert into transacciones(codigo, numero_cuenta, monto, tipo, fecha, hora)
-values(32599, '22002', 1600, 'C', '17/05/2021', '16:37');
 
 insert into transacciones(codigo, numero_cuenta, monto, tipo, fecha, hora)
 values(32165, '51437', 1050, 'D', '25/04/2020', '15:48');
@@ -62,21 +54,4 @@ values(54143, '85213', 2000, 'C', '11/09/1999', '7:30');
 insert into banco(codigo_banco,codigo_transaccion,detalle)
 values(02, '1', 'PAGO SERVICIO BASICO');
 
-insert into banco(codigo_banco,codigo_transaccion,detalle)
-values(06, '54143', 'PAGO  BASICO');
-
-
---RETO24--
-select * from
-transacciones tr ,banco bc
-where
-  tr.tipo ='C'
-and tr.numero_cuenta between '22001' and '22004';
-
-
-select * from
-transacciones tr ,banco bc
-where
-tr.codigo=bc.codigo_transaccion
-and  bc.codigo_transaccion =1
 

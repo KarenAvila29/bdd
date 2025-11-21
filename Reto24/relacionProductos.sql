@@ -47,22 +47,3 @@ insert into ventas(id_venta,codigo_producto,fecha_venta,cantidad)
 values (03,3,'10/12/2025',3);
 insert into ventas(id_venta,codigo_producto,fecha_venta,cantidad)
 values (04,9,'10/02/2025',4);
-insert into ventas(id_venta,codigo_producto,fecha_venta,cantidad)
-values (05,9,'10/02/2025',9);
-
-
---RETO24--
-select pr.nombre,pr.stock,ve.cantidad from
-productos pr ,ventas ve
-where
-pr.codigo=ve.codigo_producto
-and pr.nombre like '%m%'
-or pr.descripcion is null
-
-
-select pr.nombre,pr.stock from
-productos pr ,ventas ve
-where
-ve.codigo_producto=pr.codigo
-and ve.cantidad =5;
-

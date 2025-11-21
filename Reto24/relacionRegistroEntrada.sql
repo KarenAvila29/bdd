@@ -62,23 +62,4 @@ insert into empleado(codigo_empleado,nombre,fecha,hora)
 values(2204, 'Karen4', '02/10/2023', '13:00');
 
 
---RETO24--
-select re.cedula_empleado, re.fecha,e.nombre from 
-empleado e , registros_entradas re 
- --re.codigo_empleado=e.codigo_empleado 
-where 
-  
-       ( re.fecha between '01/08/2023' and '30/08/2023' )
-   or ( re.cedula_empleado like '17%' 
-        and re.hora between '08:00' and '12:00' )
-   or ( re.fecha between '06/10/2023' and '20/10/2023'
-        and re.cedula_empleado like '08%'
-        and re.hora between '09:00' and '13:00' );
-
-select re.codigo_registro, e.nombre from
-empleado e , registros_entradas re 
-where
- e.codigo_empleado = re.codigo_empleado
-and e.codigo_empleado ='2201'
-
 
