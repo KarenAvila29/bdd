@@ -81,4 +81,14 @@ where
  e.codigo_empleado = re.codigo_empleado
 and e.codigo_empleado ='2201'
 
+---RETO25
+select cedula_empleado ,count(*) as total_registro_entradas
+from registros_entradas
+group by cedula_empleado
+
+select  max(fecha)as fecha_maxima,
+	min(fecha) as fecha_minima
+from empleado
+
+
 

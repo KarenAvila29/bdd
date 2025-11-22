@@ -31,3 +31,12 @@ select pf.id_plataforma,pf.nombre_plataforma,pf.codigo_videojuego from
  plataformas pf ,videojuegos vj
  where 
  vj.nombre='God of War';
+
+ --RETO25-
+select codigo_videojueg, count(*)  as total_plataformas 
+from plataformas
+group by codigo_videojuego
+
+
+select round(avg(cast(valoracion as decimal)), 2) as valoracion_promedio
+from videojuegos
